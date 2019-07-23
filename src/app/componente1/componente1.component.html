@@ -1,0 +1,26 @@
+<p>componente1 works!</p>
+<button (click) = "funcion1()">Bandera</button>
+<div *ngIf="bandera">
+    <img width="500" src="/assets/images/angular2.jpg">
+</div>
+
+<h4 appDirectiva1 >Practica Clase NG-FOR, NG-Switch</h4>
+<ul appDirectiva1 *ngFor="let person of people"
+    [ngSwitch]="person.country"> 
+
+  <li *ngSwitchCase="'BO'"
+      style="color:green" appDirectiva1>{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'USA'"
+      style="color:red" appDirectiva1>{{ person.name }} ({{ person.country }})
+  </li>
+  
+  <li *ngSwitchDefault
+      class="text-warning" appDirectiva1>{{ person.name }} ({{ person.country }})
+  </li>
+</ul>
+<div> 
+    <button appDirectiva1>mi primera directiva!</button>
+    <p appDirectiva1>Parrafo generico 1</p>
+    <h1 appDirectiva1>Da igual que etiqueta lo tenga</h1>
+  </div>
